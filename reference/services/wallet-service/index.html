@@ -1,0 +1,1095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ecosystems-docs-alpha.trinsic.id/reference/services/wallet-service/">
+      
+      
+        
+      
+      <link rel="icon" href="../../../_static/logo.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6+insiders-3.1.5">
+    
+    
+      
+        <title>Wallet Service - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8e719741.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.1d832a92.min.css">
+        
+      
+      <link rel="preload" as="style" href="../../../assets/stylesheets/vendor/mermaid.733f213f.min.css">
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Inter";--md-code-font-family:"JetBrains Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/vs.min.css">
+    
+      <link rel="stylesheet" href="../../../_static/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../../..":"../../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wallet-service" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../../_static/logo-title.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Wallet Service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M342.8 352.7c5.7-9.6 9.2-20.7 9.2-32.7 0-35.3-28.7-64-64-64-17.2 0-32.8 6.9-44.3 17.9-16.3-29.6-47.5-49.9-83.7-49.9-53 0-96 43-96 96 0 2 .5 3.8.6 5.7C27.1 338.8 0 374.1 0 416c0 53 43 96 96 96h240c44.2 0 80-35.8 80-80 0-41.9-32.3-75.8-73.2-79.3zm222.5-54.3c-93.1 17.7-178.5-53.7-178.5-147.7 0-54.2 29-104 76.1-130.8 7.3-4.1 5.4-15.1-2.8-16.7C448.4 1.1 436.7 0 425 0 319.1 0 233.1 85.9 233.1 192c0 8.5.7 16.8 1.8 25 5.9 4.3 11.6 8.9 16.7 14.2 11.4-4.7 23.7-7.2 36.4-7.2 52.9 0 96 43.1 96 96 0 3.6-.2 7.2-.6 10.7 23.6 10.8 42.4 29.5 53.5 52.6 54.4-3.4 103.7-29.3 137.1-70.4 5.3-6.5-.5-16.1-8.7-14.5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/trinsic-id/sdk/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trinsic-id/sdk
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../../_static/logo-title.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/trinsic-id/sdk/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trinsic-id/sdk
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Start Building
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Start Building" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Start Building
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/vaccination-cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/vaccination-node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/vaccination-browser/" class="md-nav__link">
+        Web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/vaccination-net/" class="md-nav__link">
+        C#
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../walkthrough/vaccination-python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Wallet Service
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Wallet Service
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-wallet" class="md-nav__link">
+    Create Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-record" class="md-nav__link">
+    Insert Record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-query" class="md-nav__link">
+    Search / Query
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-credential" class="md-nav__link">
+    Issue Credential
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-proof" class="md-nav__link">
+    Create Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-proof" class="md-nav__link">
+    Verify Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-exchange" class="md-nav__link">
+    Data Exchange
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../provider-service/" class="md-nav__link">
+        Provider Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trust-registry/" class="md-nav__link">
+        Trust Registry
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://join.slack.com/t/trinsiccommunity/shared_invite/zt-pcsdy7kn-h4vtdPEpqQUlmirU8FFzSQ" class="md-nav__link">
+        Join Slack Community
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/trinsic-id" class="md-nav__link">
+        Contribute on Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mailto:support@trinsic.id" class="md-nav__link">
+        Email us
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          What's Next
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What's Next" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's Next
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../early-adopter/" class="md-nav__link">
+        Join Trinsic Ecosystems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-wallet" class="md-nav__link">
+    Create Wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-record" class="md-nav__link">
+    Insert Record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-query" class="md-nav__link">
+    Search / Query
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-credential" class="md-nav__link">
+    Issue Credential
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-proof" class="md-nav__link">
+    Create Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-proof" class="md-nav__link">
+    Verify Proof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-exchange" class="md-nav__link">
+    Data Exchange
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/trinsic-id/sdk/edit/main/docs/reference/services/wallet-service.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                
+                <h1 id="wallet-service">Wallet Service<a class="headerlink" href="#wallet-service" title="Permanent link">&para;</a></h1>
+<p>The wallet service is the main interface for interacting with a cloud wallet. The service endpoints are designed to closely match the recommendations of the <a href="https://w3c-ccg.github.io/universal-wallet-interop-spec/" target="_blank">Universal Wallet 2020 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a> specficiation by W3C CCG. The service exposes a gRPC interface and a set of data contracts as described in the specification. Our intention with this design is to bring it closer to interoperability as more implementations of this wallet appear in production.</p>
+<h2 id="create-wallet">Create Wallet<a class="headerlink" href="#create-wallet" title="Permanent link">&para;</a></h2>
+<p>Wallets can be created directly by the user or through an invitation by the ecosystem provider. Depending on the ecosystem settings, direct wallet creation may not be enabled for your provider.</p>
+<h3 id="create-wallet-directly">Create wallet directly<a class="headerlink" href="#create-wallet-directly" title="Permanent link">&para;</a></h3>
+<p>To create a wallet directly without invitation, use the following methods. These methods return secure profile data that should be stored in a safe place. The profile is used to authenticate the wallet service with the cloud provider. Read more details and recommendations in the <a href="/reference/setup/#authorization">Security Profiles</a> page.</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet create --name &lt;profile_name&gt;</code></pre>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">const profile = await walletService.createWallet();</code></pre>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var profile = await walletService.Create();</code></pre>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">profile = await wallet_service.create_wallet()</code></pre>
+</div>
+</div>
+<h3 id="create-wallet-with-provider-invitation">Create wallet with provider invitation<a class="headerlink" href="#create-wallet-with-provider-invitation" title="Permanent link">&para;</a></h3>
+<p>If invited by a provider, you can supply the security code found in your invitation (via email, SMS, etc). Read more about <a href="/reference/services/provider-service/#invite-participants">inviting participants</a> to your ecosystem as provider.</p>
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet create --name &lt;profile&gt; --security-code &lt;code&gt;</code></pre>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">const profile = await walletService.createWallet("&lt;security code&gt;");</code></pre>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var profile = await walletService.Create("&lt;security code&gt;");</code></pre>
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">profile = await wallet_service.create_wallet("&lt;security code&gt;")</code></pre>
+</div>
+</div>
+<h2 id="insert-record">Insert Record<a class="headerlink" href="#insert-record" title="Permanent link">&para;</a></h2>
+<p>This method allows inserting any JSON data in the wallet.</p>
+<div class="tabbed-set" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet insert-item --item &lt;INPUT_JSON_FILE&gt;</code></pre>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">let itemId = await walletService.insertItem({
+    "foo": "bar"
+});</code></pre>
+</div>
+<input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><label for="__tabbed_3_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var item = new JObject
+{
+    { "foo", "bar" }
+};
+
+var itemId = await walletService.InsertItem(item);</code></pre>
+</div>
+<input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><label for="__tabbed_3_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">item_id = await wallet_service.insert_item(credential)</code></pre>
+</div>
+</div>
+<p>The output of this method will be a unique <code>itemId</code> that can be used as input where required.</p>
+<h2 id="search-query">Search / Query<a class="headerlink" href="#search-query" title="Permanent link">&para;</a></h2>
+<p>Querying wallet data in our SDK is enabled through the use of familiar SQL syntax. All data is stored in JSON-LD format, so it can be easily searched.
+This apporach allows us to give developers full control over how data is retrieved. In addition to customizable sorting, paging and filtering, developers have the ability to construct projections, combine result sets, and even run user-defined functions over their queries.</p>
+<blockquote>
+<p>This endpoint will support querying using <a href="https://w3c-ccg.github.io/vp-request-spec/" target="_blank">Verifiable Presentation Request Spec <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a>. This feature is still in development.</p>
+</blockquote>
+<h3 id="basic-search">Basic Search<a class="headerlink" href="#basic-search" title="Permanent link">&para;</a></h3>
+<p>The default query used in the commands below returns a full wallet result set. The query is <code>SELECT * FROM c</code>.</p>
+<div class="tabbed-set" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet search</code></pre>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">const items = await walletService.Search();</code></pre>
+</div>
+<input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><label for="__tabbed_4_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var items = await walletService.Search();</code></pre>
+</div>
+<input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><label for="__tabbed_4_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">item = await wallet_service.search()</code></pre>
+</div>
+</div>
+<h3 id="sql-search">SQL Search<a class="headerlink" href="#sql-search" title="Permanent link">&para;</a></h3>
+<p>To pass custom query to the search function, use the query parameter or the available overload.</p>
+<div class="tabbed-set" data-tabs="5:4"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet search \
+    --query "SELECT * FROM c WHERE c.type = 'VerifiableCredential'"</code></pre>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">const query = "SELECT * FROM c WHERE c.type = 'VerifiableCredential'";
+
+const items = await walletService.search(query);</code></pre>
+</div>
+<input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><label for="__tabbed_5_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var items = await walletService.Search("SELECT * FROM c WHERE c.type = 'VerifiableCredential'");</code></pre>
+</div>
+<input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><label for="__tabbed_5_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">query = "SELECT * FROM c WHERE c.type = 'VerifiableCredential'"
+item = await wallet_service.search(query)</code></pre>
+</div>
+</div>
+<h3 id="common-sql-queries">Common SQL Queries<a class="headerlink" href="#common-sql-queries" title="Permanent link">&para;</a></h3>
+<h4 id="paging">Paging<a class="headerlink" href="#paging" title="Permanent link">&para;</a></h4>
+<p>Paging uses the <code>OFFSET</code> clause that takes in a value indicating how many records should be skipped in the returned query. To specify the size of the result set (page size) use the <code>LIMIT</code> clause.</p>
+<pre class="highlight"><code class="language-sql">SELECT * FROM c OFFSET 10 LIMIT 5</code></pre>
+<h4 id="sorting">Sorting<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h4>
+<p>The optional <code>ORDER BY</code> clause specifies the sorting order for results returned by the query. To control sorting order, specify <code>ASC</code> or <code>DESC</code> at the end; if not specified ascending order is used by default.</p>
+<pre class="highlight"><code class="language-sql">SELECT * FROM c ORDER BY c.credential.issued DESC</code></pre>
+<h4 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h4>
+<p>The optional WHERE clause (<code>WHERE &lt;filter_condition&gt;</code>) specifies condition(s) that the source JSON items must satisfy for the query to include them in results. A JSON item must evaluate the specified conditions to true to be considered for the result. The index layer uses the <code>WHERE</code> clause to determine the smallest subset of source items that can be part of the result.</p>
+<pre class="highlight"><code class="language-sql">SELECT * FROM c WHERE c.name = 'Trinsic' AND c.dateCreated &gt;= "2020-09-30T23:14:25.7251173Z"</code></pre>
+<h4 id="grouping">Grouping<a class="headerlink" href="#grouping" title="Permanent link">&para;</a></h4>
+<p>The <code>GROUP BY</code> clause divides the query's results according to the values of one or more specified properties.
+Examples and detailed description on working with grouped results <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/sql-query-group-by" target="_blank">can be found here <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a></p>
+<h3 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
+<p>You can read the full documentation on working with SQL queries on the <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/sql-query-getting-started" target="_blank">Azure Cosmos DB website <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a>.</p>
+<h2 id="issue-credential">Issue Credential<a class="headerlink" href="#issue-credential" title="Permanent link">&para;</a></h2>
+<p>The wallet service supports signing data using <a href="https://w3c-ccg.github.io/ldp-bbs2020/" target="_blank">BBS+ Signatures <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a>. The data is signed with a key unique to the owner's wallet. This key is also used as linked secret, when it comes to proof derivation.</p>
+<blockquote>
+<p>This endpoint requires that the user provide a valid JSON-LD document.</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic issuer issue --document &lt;INPUT_JSONLD_FILE&gt; --out &lt;OUTPUT_FILE&gt;</code></pre>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">let unsignedDocument = {
+    "@context": "https://w3id.org/security/v2",
+    "id": "https://issuer.oidp.uscis.gov/credentials/83627465"
+}
+
+let signedDocument = await walletService.issue(unsignedDocument);</code></pre>
+</div>
+<input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><label for="__tabbed_6_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var unsignedDocument = new JObject
+{
+    { "@context", "https://w3id.org/security/v2" },
+    { "id", "https://issuer.oidp.uscis.gov/credentials/83627465" }
+};
+
+var signedDocument = await walletService.IssueCredential(unsignedDocument);</code></pre>
+</div>
+<input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><label for="__tabbed_6_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">import json
+credential_json = json.dumps({
+  { "@context", "https://w3id.org/security/v2" },
+  { "id", "https://issuer.oidp.uscis.gov/credentials/83627465" }
+})
+credential = await wallet_service.issue_credential(credential_json)</code></pre>
+</div>
+</div>
+<p>The output of this method will be a signed JSON document using BBS+ Signature Suite 2020. This document is not automatically stored in the wallet when issued. You need to call the <a href="#insert-record">insert record</a> separately if you'd like to store a copy of this document.</p>
+<h2 id="create-proof">Create Proof<a class="headerlink" href="#create-proof" title="Permanent link">&para;</a></h2>
+<p>Wallets allow data to be shared between parties in a secure manner, using a technique called <a href="/faq/#what-are-zero-knowledge-proofs">Zero Knowledge Proofs</a>. Trinsic Ecosystems uses the BBS+ Signature Proof scheme to allow data to be selectively disclosed to the requesting party. This allows users to share only the requested subset of data, instead the entire document.</p>
+<p>The endpoint to create a proof requires two inputs:</p>
+<ul>
+<li>document in the wallet that is signed with the correct signature</li>
+<li>JSONLD frame that describes the data to be disclosed</li>
+</ul>
+<div class="tabbed-set" data-tabs="7:4"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic issuer create-proof --document-id &lt;STRING&gt; --out &lt;OUTPUT_FILE&gt; --reveal-document &lt;JSONLD_FRAME_FILE&gt;</code></pre>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">let frame = {
+    "@context": "https://www.w3.org/2018/credentials/v1",
+    "type": [ "VerifiableCredential" ],
+    "@explicit": true,
+    "issuer": {}
+}
+let itemId = "&lt;item document id&gt;";
+
+let signedDocument = await walletService.createProof(itemId, frame);</code></pre>
+</div>
+<input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><label for="__tabbed_7_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var frame = new JObject
+{
+    { "@context", "https://www.w3.org/2018/credentials/v1" },
+    { "@explicit", true }
+    { "issuer", new JObject() }
+};
+var itemId = "&lt;item document id&gt;";
+
+var signedDocument = await walletService.CreateProof(itemId, frame);</code></pre>
+</div>
+<input id="__tabbed_7_4" name="__tabbed_7" type="radio" /><label for="__tabbed_7_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">import json
+frame_json = json.dumps({
+"@context": "https://www.w3.org/2018/credentials/v1",
+"type": [ "VerifiableCredential" ],
+"@explicit": true,
+"issuer": {}
+})
+
+presentation = wallet_services.create_proof(document_id, frame_json)</code></pre>
+</div>
+</div>
+<h2 id="verify-proof">Verify Proof<a class="headerlink" href="#verify-proof" title="Permanent link">&para;</a></h2>
+<p>This endpoint verifies if the submitted data contains a valid proof. The data to be verified must contain a Linked Data Proof with BBS+ signature scheme.</p>
+<div class="tabbed-set" data-tabs="8:4"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic issuer verify-proof --proof-document &lt;JSONLD_FILE&gt;</code></pre>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">let isValid = await walletService.verifyProof(proofDocument);
+
+console.log("Verify result: " + isValid);</code></pre>
+</div>
+<input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><label for="__tabbed_8_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">var isValid = await walletService.VerifyProof(proofDocument);
+
+Console.WriteLine($"Verify result: {isValid}");</code></pre>
+</div>
+<input id="__tabbed_8_4" name="__tabbed_8" type="radio" /><label for="__tabbed_8_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">valid = await wallet_service.verify_proof(presentation)</code></pre>
+</div>
+</div>
+<h2 id="data-exchange">Data Exchange<a class="headerlink" href="#data-exchange" title="Permanent link">&para;</a></h2>
+<p>Exchanging data securely is one of the fundamental functions of digital identity systems. There are many specifications with varying maturity that aim to provide interoperable and secure way of exchanging authentic data. We are commited to providing support for these methods.</p>
+<ul>
+<li><a href="https://identity.foundation/didcomm-messaging/spec/" target="_blank">DIDComm Messaging <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a></li>
+<li><a href="https://identity.foundation/wallet-and-credential-interactions/" target="_blank">Wallet And Credential Interactions <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a></li>
+<li><a href="https://mattrglobal.github.io/oidc-client-bound-assertions-spec/" target="_blank">OpenID Connect Credential Provider <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg></span></a></li>
+</ul>
+<blockquote>
+<p>During this beta period, we are only supporting exchanging data between users by using their email addresses. The messages are routed securely to the destination wallet without leaving the secure network of the ecosystem backend. Our goal is to provide basic ability to share data without affecting the user experience. As interoperable exchange methods become available, we will add this functionality in the SDK.</p>
+</blockquote>
+<h3 id="sending-documents-using-email-as-identifier">Sending documents using Email as identifier<a class="headerlink" href="#sending-documents-using-email-as-identifier" title="Permanent link">&para;</a></h3>
+<p>To send a document to another user, they must have created a wallet and <a href="#create-wallet-with-provider-invitation">associated their email address</a> with that wallet.</p>
+<div class="tabbed-set" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Trinsic CLI</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-bash">trinsic wallet send --email &lt;EMAIL_ADDRESS&gt; --item &lt;FILE&gt;</code></pre>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">TypeScript</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-typescript">await walletService.send(document, "admin@example.com");</code></pre>
+</div>
+<input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><label for="__tabbed_9_3">C#</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-csharp">await walletService.Send(document, "admin@example.com");</code></pre>
+</div>
+<input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><label for="__tabbed_9_4">Python</label><div class="tabbed-content">
+<pre class="highlight"><code class="language-python">await wallet_service.send(document, "admin@example.com");</code></pre>
+</div>
+</div>
+                
+                  
+
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))for(var set of document.querySelectorAll("[data-tabs]")){var labels=set.querySelectorAll(":scope > label");e:for(var tab of tabs)for(var label of labels)if(label.innerText.trim()===tab){var input=label.previousElementSibling;input.checked=!0;break e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Setup
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../provider-service/" class="md-footer__link md-footer__link--next" aria-label="Next: Provider Service" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Provider Service
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.expand", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.d5944110.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4b1ed6f7.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="../../../_static/javascripts/config.js"></script>
+      
+    
+  </body>
+</html>

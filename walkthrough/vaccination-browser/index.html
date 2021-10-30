@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://ecosystems-docs-alpha.trinsic.id/walkthrough/vaccination-browser/">
+      
+      
+        
+      
+      <link rel="icon" href="../../_static/logo.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6+insiders-3.1.5">
+    
+    
+      
+        <title>Web - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8e719741.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.1d832a92.min.css">
+        
+      
+      <link rel="preload" as="style" href="../../assets/stylesheets/vendor/mermaid.733f213f.min.css">
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Inter";--md-code-font-family:"JetBrains Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/vs.min.css">
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vaccination-use-case-for-browsers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../_static/logo-title.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M342.8 352.7c5.7-9.6 9.2-20.7 9.2-32.7 0-35.3-28.7-64-64-64-17.2 0-32.8 6.9-44.3 17.9-16.3-29.6-47.5-49.9-83.7-49.9-53 0-96 43-96 96 0 2 .5 3.8.6 5.7C27.1 338.8 0 374.1 0 416c0 53 43 96 96 96h240c44.2 0 80-35.8 80-80 0-41.9-32.3-75.8-73.2-79.3zm222.5-54.3c-93.1 17.7-178.5-53.7-178.5-147.7 0-54.2 29-104 76.1-130.8 7.3-4.1 5.4-15.1-2.8-16.7C448.4 1.1 436.7 0 425 0 319.1 0 233.1 85.9 233.1 192c0 8.5.7 16.8 1.8 25 5.9 4.3 11.6 8.9 16.7 14.2 11.4-4.7 23.7-7.2 36.4-7.2 52.9 0 96 43.1 96 96 0 3.6-.2 7.2-.6 10.7 23.6 10.8 42.4 29.5 53.5 52.6 54.4-3.4 103.7-29.3 137.1-70.4 5.3-6.5-.5-16.1-8.7-14.5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/trinsic-id/sdk/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trinsic-id/sdk
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../_static/logo-title.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/trinsic-id/sdk/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    trinsic-id/sdk
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/" class="md-nav__link">
+        Concepts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Start Building
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Start Building" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Start Building
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaccination-cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaccination-node/" class="md-nav__link">
+        Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Web
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecosystem-setup" class="md-nav__link">
+    Ecosystem setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    Technical requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-project" class="md-nav__link">
+    Create new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-webpack" class="md-nav__link">
+    Configure Webpack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-website" class="md-nav__link">
+    Set up Website
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-services" class="md-nav__link">
+    Configure services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-wallet-profiles" class="md-nav__link">
+    Setup wallet profiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-issuance" class="md-nav__link">
+    Certificate issuance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-certificate-in-personal-wallet" class="md-nav__link">
+    Store certificate in personal wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-vaccination" class="md-nav__link">
+    Proof of vaccination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-sample-code" class="md-nav__link">
+    Complete sample code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaccination-net/" class="md-nav__link">
+        C#
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vaccination-python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/services/wallet-service/" class="md-nav__link">
+        Wallet Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/services/provider-service/" class="md-nav__link">
+        Provider Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/services/trust-registry/" class="md-nav__link">
+        Trust Registry
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Support
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Support
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://join.slack.com/t/trinsiccommunity/shared_invite/zt-pcsdy7kn-h4vtdPEpqQUlmirU8FFzSQ" class="md-nav__link">
+        Join Slack Community
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/trinsic-id" class="md-nav__link">
+        Contribute on Github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mailto:support@trinsic.id" class="md-nav__link">
+        Email us
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" data-md-state="indeterminate" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          What's Next
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What's Next" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          What's Next
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../early-adopter/" class="md-nav__link">
+        Join Trinsic Ecosystems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecosystem-setup" class="md-nav__link">
+    Ecosystem setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-requirements" class="md-nav__link">
+    Technical requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-project" class="md-nav__link">
+    Create new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-webpack" class="md-nav__link">
+    Configure Webpack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-website" class="md-nav__link">
+    Set up Website
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-services" class="md-nav__link">
+    Configure services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-wallet-profiles" class="md-nav__link">
+    Setup wallet profiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificate-issuance" class="md-nav__link">
+    Certificate issuance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-certificate-in-personal-wallet" class="md-nav__link">
+    Store certificate in personal wallet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-of-vaccination" class="md-nav__link">
+    Proof of vaccination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    Verification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-sample-code" class="md-nav__link">
+    Complete sample code
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/trinsic-id/sdk/edit/main/docs/walkthrough/vaccination-browser.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                
+                <h1 id="vaccination-use-case-for-browsers">Vaccination Use Case for Browsers<a class="headerlink" href="#vaccination-use-case-for-browsers" title="Permanent link">&para;</a></h1>
+<p>In this walkthrough we will showcase a practical example of how participants in an ecosystem use verifiable data to exchange trusted bits of information.</p>
+<h2 id="ecosystem-setup">Ecosystem setup<a class="headerlink" href="#ecosystem-setup" title="Permanent link">&para;</a></h2>
+<p>Before we begin, please ensure that you have access to our beta environment. If you haven't yet, <a href="/early-adopter.html">join our early adopter program</a> and we'll get in touch.</p>
+<h2 id="technical-requirements">Technical requirements<a class="headerlink" href="#technical-requirements" title="Permanent link">&para;</a></h2>
+<p>You can run this example on your local machine, or you can use our Gitpod setup to bootstrap a full development environment. If running locally, you only need node and npm installed on your machine and a code editor of your choice.</p>
+<h2 id="create-new-project">Create new project<a class="headerlink" href="#create-new-project" title="Permanent link">&para;</a></h2>
+<p>Let's create a new console app that we will use to add our sample code</p>
+<pre class="highlight"><code class="language-bash">mkdir VaccinationSample &amp;&amp; cd VaccinationSample &amp;&amp; npm init</code></pre>
+<p>You can select all the defaults for the node project.</p>
+<p>Add the required dependencies</p>
+<pre class="highlight"><code class="language-bash">npm i @trinsic/trinsic-web</code></pre>
+<pre class="highlight"><code class="language-bash">npm i --save-dev http-server webpack webpack-cli</code></pre>
+<h2 id="configure-webpack">Configure Webpack<a class="headerlink" href="#configure-webpack" title="Permanent link">&para;</a></h2>
+<p>After installing the dependencies you'll need a configuration file for webpack.
+Create a file called webpack.config.js at the root of your project and then copy and paste this into that file
+<pre class="highlight"><code class="language-js">const path = require('path');
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, './src'),
+    filename: 'bundle.js',
+  }
+};</code></pre></p>
+<h2 id="set-up-website">Set up Website<a class="headerlink" href="#set-up-website" title="Permanent link">&para;</a></h2>
+<p>Create a simple html page with a script tag referencing the webpack bundle that will be built after completing the sample code. Note that you will not have the bundle.js file yet because it will be generated from the index.js file you create.</p>
+<pre class="highlight"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;Vaccination Sample&lt;/title&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+  &lt;meta name="description" content="" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Vaccination Sample&lt;/h1&gt;
+  &lt;div id="wallet"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src="../bundle.js"&gt;&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+<p>Your file structure should look like this</p>
+<pre class="highlight"><code>VaccinationSample
+    src
+        index.html
+        index.js
+    package.json
+    webpack.config.js</code></pre>
+<h2 id="configure-services">Configure services<a class="headerlink" href="#configure-services" title="Permanent link">&para;</a></h2>
+<p>Create a reference to the wallet service that points to your ecosystem service. You should have received this URL with your ecosystem setup. In your <code>index.js</code> file add the following line replacing the placeholder with your URL:</p>
+<pre class="highlight"><code class="language-js">const { WalletService } = require('@trinsic/trinsic-web')
+
+const walletService = new WalletService("&lt;ECOSYSTEM SERVICE URL&gt;");</code></pre>
+<h2 id="setup-wallet-profiles">Setup wallet profiles<a class="headerlink" href="#setup-wallet-profiles" title="Permanent link">&para;</a></h2>
+<p>Let's create three different profiles, each pointing to a separate wallet. Since we are using a single console app for this demo, we will simply set the active profile before each interaction to designate which actor is currently taking action.
+To create a new wallet profile, we use the <a href="/reference/services/wallet-service/#create-wallet">Create Wallet</a> feature.</p>
+<pre class="highlight"><code class="language-js">let allison = await walletService.createWallet();
+let clinic = await walletService.createWallet();
+let airline = await walletService.createWallet();</code></pre>
+<p>If you would like to save the profile for future use, you can simply export the serialized profile to a local storage. Please note that the profiles contain sensitive key data, so they should be stored in a secure enclave.</p>
+<pre class="highlight"><code class="language-js">const fs = require('fs');
+const { Struct } = require('google-protobuf/google/protobuf/struct_pb');
+
+// Serialize profile by exporting the binary protobuf form
+localStorage.setItem("allison.bin", allison.serializeBinary());
+
+// Create profile from existing data
+let allison = WalletProfile.deserializeBinary(localStorage.getItem("allison.bin"));</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Loading Profiles</p>
+<p>In order to load a profile from a saved file you'll need to install google-protobuf with <code>npm i google-protobuf</code> in order to use the Struct class and convert the DID Document from JavaScript to the protobuf form.</p>
+</div>
+<p>Read more about <a href="../reference/setup/index.md/profiles">security profiles</a> and authentication.</p>
+<h2 id="certificate-issuance">Certificate issuance<a class="headerlink" href="#certificate-issuance" title="Permanent link">&para;</a></h2>
+<p>Upon receiving her vaccine, Allison also receives a digital certificate from the clinic. This ceritificate is digitially signed by the clinic, acting as an issuer.
+The certificate is in a JSON form, and for this example, we load the JSON structure directly.</p>
+<pre class="highlight"><code class="language-js">// Set active profile to 'clinic' so we can issue credential signed
+// with the clinic's signing keys
+walletService.setProfile(clinic);
+
+// Read the JSON credential data
+let credentialJson = {
+  "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3id.org/vaccination/v1",
+      "https://w3id.org/security/bbs/v1"
+  ],
+  "id": "urn:uvci:af5vshde843jf831j128fj",
+  "type": [
+      "VaccinationCertificate",
+      "VerifiableCredential"
+  ],
+  "description": "COVID-19 Vaccination Certificate",
+  "name": "COVID-19 Vaccination Certificate",
+  "expirationDate": "2029-12-03T12:19:52Z",
+  "issuanceDate": "2019-12-03T12:19:52Z",
+  "issuer": "did:key:zUC724vuGvHpnCGFG1qqpXb81SiBLu3KLSqVzenwEZNPoY35i2Bscb8DLaVwHvRFs6F2NkNNXRcPWvqnPDUd9ukdjLkjZd3u9zzL4wDZDUpkPAatLDGLEYVo8kkAzuAKJQMr7N2",
+  "credentialSubject": {
+      "id": "urn:uuid:c53e70f8-ce9a-4576-8744-e5f85c20a743",
+      "type": "VaccinationEvent",
+      "batchNumber": "1183738569",
+      "countryOfVaccination": "US"
+  }
+};
+
+// Sign the credential using BBS+ signature scheme
+let credential = await walletService.issueCredential(JSON.parse(credentialJson));</code></pre>
+<p>At this point, the clinic can send the signed credential to Allison using any available methods. These methods can include any message exchange protocol, or a custom transport. In this case, we'll assume that the credential was delivered to Allison in an offline environment.</p>
+<h2 id="store-certificate-in-personal-wallet">Store certificate in personal wallet<a class="headerlink" href="#store-certificate-in-personal-wallet" title="Permanent link">&para;</a></h2>
+<p>Allison can store this credential in her cloud wallet, simply by calling the <a href="/reference/services/wallet-service/#insert-record">Insert Item</a> function.</p>
+<pre class="highlight"><code class="language-js">// Set active profile to 'allison' so we can manage her cloud wallet
+walletService.setProfile(allison);
+
+// Insert the signed credential
+let itemId = await walletService.insertItem(credential);</code></pre>
+<h2 id="proof-of-vaccination">Proof of vaccination<a class="headerlink" href="#proof-of-vaccination" title="Permanent link">&para;</a></h2>
+<p>Before boarding an airplane, Allison must show a proof of vaccination. The request for this proof also comes in a form of JSON, in this case a JSON-LD frame.
+This request can be communicated using any exchange protocol. Again, we'll assume this was done offline.</p>
+<p>This request asks Allison to provide proof of valid vaccination certificate, including the <code>issuer</code>, <code>batchNumber</code>and <code>countryOfVaccination</code> fields.</p>
+<p>Allison can use the <a href="/reference/services/wallet-service/#create-proof">Create Proof</a> functions to build a proof that will share only the requested fields.</p>
+<pre class="highlight"><code class="language-js">// We'll read the request frame from a file and communicate this with Allison
+let proofRequestJson = {
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/vaccination/v1",
+        "https://w3id.org/security/bbs/v1"
+    ],
+    "type": [
+        "VerifiableCredential",
+        "VaccinationCertificate"
+    ],
+    "@explicit": true,
+    "issuer": {},
+    "credentialSubject": {
+        "@explicit": true,
+        "@type": "VaccinationEvent",
+        "batchNumber": {},
+        "countryOfVaccination": {}
+    }
+}
+
+// Set the active profile to 'allison'
+walletService.setProfile(allison);
+
+// Build a proof for the given request and the `itemId` we previously received
+// which points to the stored credential
+let credentialProof = await walletService.createProof(itemId, JSON.parse(proofRequestJson));</code></pre>
+<h2 id="verification">Verification<a class="headerlink" href="#verification" title="Permanent link">&para;</a></h2>
+<p>Allison shares the proof of credential she created with the airline. The airline can now use <a href="/reference/services/wallet-service/#verify-proof">Verify Proof</a> functions to check the validity of the proof.</p>
+<pre class="highlight"><code class="language-js">// Set active profile to 'airline'
+walletService.setProfile(airline);
+
+// Check for valid signature
+let valid = await walletService.verifyProof(credentialProof);
+
+document.getElementById("wallet").innerHTML = valid</code></pre>
+<h2 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
+<p>To build the bundle.js file run
+<pre class="highlight"><code class="language-bash">webpack build</code></pre></p>
+<h2 id="run">Run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
+<p>To serve the website and run the sample run
+<pre class="highlight"><code class="language-bash">npx http-server src</code></pre></p>
+<h2 id="complete-sample-code">Complete sample code<a class="headerlink" href="#complete-sample-code" title="Permanent link">&para;</a></h2>
+<p>This sample is available in our <a href="">GitHub</a> repo.</p>
+                
+                  
+
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))for(var set of document.querySelectorAll("[data-tabs]")){var labels=set.querySelectorAll(":scope > label");e:for(var tab of tabs)for(var label of labels)if(label.innerText.trim()===tab){var input=label.previousElementSibling;input.checked=!0;break e}}</script>
+
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../vaccination-node/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Node" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Node
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../vaccination-net/" class="md-footer__link md-footer__link--next" aria-label="Next: C#" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              C#
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.expand", "navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.d5944110.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4b1ed6f7.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="../../_static/javascripts/config.js"></script>
+      
+    
+  </body>
+</html>
